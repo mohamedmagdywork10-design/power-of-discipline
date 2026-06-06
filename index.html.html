@@ -1,0 +1,1921 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="اكتشف قوة الالتزام اليومي وكيف يمكن أن يغير حياتك خلال عام واحد فقط. دليلك الشامل للانضباط الذاتي والنجاح.">
+<meta name="keywords" content="الالتزام, الانضباط الذاتي, العادات الإيجابية, النجاح, تغيير الحياة">
+<meta property="og:title" content="قوة الالتزام: كيف تغير حياتك خلال عام واحد">
+<meta property="og:description" content="الالتزام اليومي هو الفرق بين الأحلام والإنجازات">
+<title>قوة الالتزام | كيف تغير حياتك خلال عام واحد</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&family=Tajawal:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+
+<style>
+  /* ========== CSS VARIABLES ========== */
+  :root {
+    --primary: #1a6b4a;
+    --primary-light: #26a06e;
+    --primary-dark: #0f4530;
+    --accent: #f0a500;
+    --accent-light: #ffc93c;
+    --bg: #f8f6f0;
+    --bg-card: #ffffff;
+    --bg-secondary: #eef5f1;
+    --text-main: #1c2b22;
+    --text-body: #3a4f43;
+    --text-muted: #7a9085;
+    --border: #d4e6da;
+    --shadow: 0 4px 24px rgba(26,107,74,0.10);
+    --shadow-lg: 0 12px 48px rgba(26,107,74,0.16);
+    --radius: 16px;
+    --radius-sm: 8px;
+    --font-display: 'Tajawal', sans-serif;
+    --font-body: 'Cairo', sans-serif;
+    --transition: 0.3s cubic-bezier(0.4,0,0.2,1);
+  }
+
+  [data-theme="dark"] {
+    --primary: #2ecc8e;
+    --primary-light: #4aeaac;
+    --primary-dark: #1a9965;
+    --accent: #ffc93c;
+    --accent-light: #ffe08a;
+    --bg: #0f1a14;
+    --bg-card: #172212;
+    --bg-secondary: #1a2e1f;
+    --text-main: #e8f5ec;
+    --text-body: #b0ccb8;
+    --text-muted: #6a9478;
+    --border: #2a4535;
+    --shadow: 0 4px 24px rgba(0,0,0,0.4);
+    --shadow-lg: 0 12px 48px rgba(0,0,0,0.5);
+  }
+
+  /* ========== RESET & BASE ========== */
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: var(--font-body);
+    background: var(--bg);
+    color: var(--text-main);
+    line-height: 1.7;
+    overflow-x: hidden;
+    transition: background var(--transition), color var(--transition);
+  }
+
+  img { max-width: 100%; display: block; }
+  a { text-decoration: none; color: inherit; }
+  ul { list-style: none; }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  section { padding: 100px 0; }
+
+  /* ========== SCROLLBAR ========== */
+  ::-webkit-scrollbar { width: 6px; }
+  ::-webkit-scrollbar-track { background: var(--bg); }
+  ::-webkit-scrollbar-thumb { background: var(--primary); border-radius: 3px; }
+
+  /* ========== LOADER ========== */
+  #loader {
+    position: fixed; inset: 0;
+    background: var(--primary-dark);
+    display: flex; align-items: center; justify-content: center;
+    z-index: 9999;
+    transition: opacity 0.6s, visibility 0.6s;
+  }
+  #loader.hidden { opacity: 0; visibility: hidden; }
+  .loader-inner {
+    display: flex; flex-direction: column; align-items: center; gap: 20px;
+  }
+  .loader-ring {
+    width: 60px; height: 60px;
+    border: 3px solid rgba(255,255,255,0.2);
+    border-top-color: var(--accent);
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+  }
+  .loader-text {
+    font-family: var(--font-display);
+    font-size: 1.2rem;
+    color: white;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    animation: pulse 1.2s ease-in-out infinite;
+  }
+  @keyframes spin { to { transform: rotate(360deg); } }
+  @keyframes pulse { 0%,100%{opacity:0.6} 50%{opacity:1} }
+
+  /* ========== NAVBAR ========== */
+  nav {
+    position: fixed; top: 0; width: 100%; z-index: 1000;
+    padding: 0;
+    transition: all var(--transition);
+  }
+  nav.scrolled {
+    background: var(--bg-card);
+    box-shadow: var(--shadow);
+  }
+  .nav-inner {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 18px 24px;
+    max-width: 1200px; margin: 0 auto;
+  }
+  .logo {
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--primary);
+    display: flex; align-items: center; gap: 10px;
+  }
+  .logo-icon {
+    width: 38px; height: 38px;
+    background: linear-gradient(135deg, var(--primary), var(--accent));
+    border-radius: 10px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.2rem;
+    color: white;
+    flex-shrink: 0;
+  }
+  .nav-links {
+    display: flex; align-items: center; gap: 32px;
+  }
+  .nav-links a {
+    font-size: 0.95rem; font-weight: 600;
+    color: var(--text-body);
+    position: relative;
+    transition: color var(--transition);
+  }
+  .nav-links a::after {
+    content: '';
+    position: absolute; bottom: -4px; right: 0;
+    width: 0; height: 2px;
+    background: var(--primary);
+    transition: width var(--transition);
+  }
+  .nav-links a:hover { color: var(--primary); }
+  .nav-links a:hover::after { width: 100%; }
+
+  .nav-actions { display: flex; align-items: center; gap: 12px; }
+
+  .btn-theme {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    width: 40px; height: 40px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    display: flex; align-items: center; justify-content: center;
+    transition: all var(--transition);
+    color: var(--text-main);
+  }
+  .btn-theme:hover { background: var(--primary); color: white; border-color: var(--primary); }
+
+  .btn-primary {
+    background: linear-gradient(135deg, var(--primary), var(--primary-light));
+    color: white;
+    padding: 10px 24px;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 0.9rem;
+    font-family: var(--font-body);
+    border: none;
+    cursor: pointer;
+    transition: all var(--transition);
+    box-shadow: 0 4px 16px rgba(26,107,74,0.3);
+  }
+  .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(26,107,74,0.4);
+  }
+
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    padding: 6px;
+  }
+  .hamburger span {
+    width: 26px; height: 2px;
+    background: var(--text-main);
+    border-radius: 2px;
+    transition: all var(--transition);
+  }
+
+  .mobile-menu {
+    display: none;
+    position: fixed;
+    top: 72px; left: 0; right: 0;
+    background: var(--bg-card);
+    padding: 24px;
+    border-top: 1px solid var(--border);
+    box-shadow: var(--shadow-lg);
+    flex-direction: column;
+    gap: 20px;
+    z-index: 999;
+  }
+  .mobile-menu.open { display: flex; }
+  .mobile-menu a {
+    font-size: 1.1rem; font-weight: 600;
+    color: var(--text-body);
+    padding: 12px 0;
+    border-bottom: 1px solid var(--border);
+    transition: color var(--transition);
+  }
+  .mobile-menu a:last-child { border-bottom: none; }
+  .mobile-menu a:hover { color: var(--primary); }
+
+  /* ========== HERO ========== */
+  .hero {
+    min-height: 100vh;
+    display: flex; align-items: center;
+    position: relative;
+    overflow: hidden;
+    padding: 120px 0 80px;
+  }
+  .hero-bg {
+    position: absolute; inset: 0;
+    background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 50%, var(--primary-light) 100%);
+    z-index: 0;
+  }
+  .hero-pattern {
+    position: absolute; inset: 0;
+    background-image:
+      radial-gradient(circle at 20% 80%, rgba(255,255,255,0.06) 0%, transparent 50%),
+      radial-gradient(circle at 80% 20%, rgba(240,165,0,0.15) 0%, transparent 50%),
+      radial-gradient(circle at 50% 50%, rgba(255,255,255,0.03) 0%, transparent 70%);
+    z-index: 1;
+  }
+  .hero-grid {
+    position: absolute; inset: 0;
+    background-image:
+      linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
+    background-size: 60px 60px;
+    z-index: 1;
+  }
+  .hero-content {
+    position: relative; z-index: 2;
+    max-width: 1200px; margin: 0 auto; padding: 0 24px;
+    display: grid; grid-template-columns: 1fr 1fr;
+    align-items: center; gap: 60px;
+  }
+  .hero-text { color: white; }
+  .hero-badge {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: rgba(255,255,255,0.12);
+    border: 1px solid rgba(255,255,255,0.2);
+    backdrop-filter: blur(10px);
+    padding: 8px 18px;
+    border-radius: 50px;
+    font-size: 0.85rem; font-weight: 600;
+    color: var(--accent-light);
+    margin-bottom: 24px;
+    animation: fadeInDown 0.8s ease both;
+  }
+  .hero-badge span { font-size: 1rem; }
+  .hero-title {
+    font-family: var(--font-display);
+    font-size: clamp(2rem, 4vw, 3.2rem);
+    font-weight: 900;
+    line-height: 1.25;
+    margin-bottom: 24px;
+    animation: fadeInDown 0.8s 0.2s ease both;
+  }
+  .hero-title .highlight {
+    color: var(--accent-light);
+    position: relative;
+  }
+  .hero-title .highlight::after {
+    content: '';
+    position: absolute;
+    bottom: 2px; right: 0; left: 0;
+    height: 3px;
+    background: var(--accent);
+    border-radius: 2px;
+    opacity: 0.6;
+  }
+  .hero-desc {
+    font-size: 1.1rem;
+    color: rgba(255,255,255,0.82);
+    line-height: 1.8;
+    margin-bottom: 36px;
+    animation: fadeInDown 0.8s 0.4s ease both;
+  }
+  .hero-actions {
+    display: flex; gap: 16px; flex-wrap: wrap;
+    animation: fadeInDown 0.8s 0.6s ease both;
+  }
+  .btn-hero {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: var(--accent);
+    color: var(--primary-dark);
+    padding: 16px 32px;
+    border-radius: 50px;
+    font-weight: 800; font-size: 1rem;
+    font-family: var(--font-body);
+    border: none; cursor: pointer;
+    transition: all var(--transition);
+    box-shadow: 0 8px 32px rgba(240,165,0,0.4);
+  }
+  .btn-hero:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 40px rgba(240,165,0,0.5);
+    background: var(--accent-light);
+  }
+  .btn-hero-outline {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: transparent;
+    color: white;
+    padding: 14px 28px;
+    border-radius: 50px;
+    font-weight: 700; font-size: 0.95rem;
+    font-family: var(--font-body);
+    border: 2px solid rgba(255,255,255,0.4);
+    cursor: pointer;
+    transition: all var(--transition);
+  }
+  .btn-hero-outline:hover {
+    background: rgba(255,255,255,0.1);
+    border-color: rgba(255,255,255,0.7);
+  }
+
+  .hero-visual {
+    animation: fadeInUp 1s 0.3s ease both;
+    position: relative;
+  }
+  .hero-card {
+    background: rgba(255,255,255,0.12);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 24px;
+    padding: 36px;
+    color: white;
+  }
+  .hero-card-title {
+    font-family: var(--font-display);
+    font-size: 1.2rem; font-weight: 700;
+    margin-bottom: 24px;
+    color: var(--accent-light);
+    display: flex; align-items: center; gap: 10px;
+  }
+  .progress-item {
+    margin-bottom: 20px;
+  }
+  .progress-label {
+    display: flex; justify-content: space-between;
+    font-size: 0.9rem; font-weight: 600;
+    margin-bottom: 8px;
+    color: rgba(255,255,255,0.9);
+  }
+  .progress-bar {
+    height: 8px;
+    background: rgba(255,255,255,0.15);
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  .progress-fill {
+    height: 100%;
+    border-radius: 4px;
+    background: linear-gradient(90deg, var(--accent), var(--accent-light));
+    width: 0%;
+    transition: width 1.5s cubic-bezier(0.4,0,0.2,1) 1s;
+  }
+  .hero-stats {
+    display: grid; grid-template-columns: 1fr 1fr 1fr;
+    gap: 16px; margin-top: 24px;
+  }
+  .hero-stat {
+    background: rgba(255,255,255,0.1);
+    border-radius: 12px;
+    padding: 16px;
+    text-align: center;
+  }
+  .hero-stat-num {
+    font-family: var(--font-display);
+    font-size: 1.6rem; font-weight: 900;
+    color: var(--accent-light);
+    line-height: 1;
+  }
+  .hero-stat-label {
+    font-size: 0.75rem;
+    color: rgba(255,255,255,0.7);
+    margin-top: 4px;
+  }
+
+  .scroll-indicator {
+    position: absolute;
+    bottom: 40px; left: 50%; transform: translateX(-50%);
+    z-index: 2; display: flex; flex-direction: column; align-items: center; gap: 8px;
+    color: rgba(255,255,255,0.6); font-size: 0.8rem;
+    animation: bounce 2s ease infinite;
+  }
+  .scroll-arrow {
+    width: 20px; height: 20px;
+    border-right: 2px solid rgba(255,255,255,0.5);
+    border-bottom: 2px solid rgba(255,255,255,0.5);
+    transform: rotate(45deg);
+  }
+  @keyframes bounce { 0%,100%{transform:translateX(-50%) translateY(0)} 50%{transform:translateX(-50%) translateY(8px)} }
+
+  /* ========== SECTION HEADERS ========== */
+  .section-header {
+    text-align: center;
+    margin-bottom: 64px;
+  }
+  .section-tag {
+    display: inline-block;
+    background: var(--bg-secondary);
+    color: var(--primary);
+    font-size: 0.8rem; font-weight: 700;
+    padding: 6px 16px;
+    border-radius: 50px;
+    border: 1px solid var(--border);
+    margin-bottom: 16px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+  .section-title {
+    font-family: var(--font-display);
+    font-size: clamp(1.8rem, 3vw, 2.6rem);
+    font-weight: 900;
+    color: var(--text-main);
+    margin-bottom: 16px;
+    line-height: 1.3;
+  }
+  .section-title .accent { color: var(--primary); }
+  .section-desc {
+    font-size: 1.05rem;
+    color: var(--text-muted);
+    max-width: 600px; margin: 0 auto;
+    line-height: 1.8;
+  }
+  .section-divider {
+    width: 60px; height: 4px;
+    background: linear-gradient(90deg, var(--primary), var(--accent));
+    border-radius: 2px;
+    margin: 20px auto 0;
+  }
+
+  /* ========== BENEFITS SECTION ========== */
+  .benefits { background: var(--bg); }
+  .benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 24px;
+  }
+  .benefit-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 36px 28px;
+    transition: all var(--transition);
+    position: relative;
+    overflow: hidden;
+  }
+  .benefit-card::before {
+    content: '';
+    position: absolute;
+    top: 0; right: 0;
+    width: 100%; height: 4px;
+    background: var(--card-color, var(--primary));
+    border-radius: var(--radius) var(--radius) 0 0;
+  }
+  .benefit-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--card-color, var(--primary));
+  }
+  .benefit-icon {
+    width: 60px; height: 60px;
+    border-radius: 16px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    background: var(--card-bg, var(--bg-secondary));
+  }
+  .benefit-title {
+    font-family: var(--font-display);
+    font-size: 1.2rem; font-weight: 800;
+    color: var(--text-main);
+    margin-bottom: 16px;
+  }
+  .benefit-list { display: flex; flex-direction: column; gap: 8px; }
+  .benefit-item {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 0.92rem; color: var(--text-body);
+  }
+  .benefit-item::before {
+    content: '✓';
+    display: flex; align-items: center; justify-content: center;
+    width: 20px; height: 20px; flex-shrink: 0;
+    background: var(--card-color, var(--primary));
+    color: white; font-size: 0.7rem; font-weight: 900;
+    border-radius: 50%;
+  }
+
+  /* ========== STATS SECTION ========== */
+  .stats-section {
+    background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+    position: relative; overflow: hidden;
+  }
+  .stats-section::before {
+    content: '';
+    position: absolute; inset: 0;
+    background-image: radial-gradient(circle at 30% 70%, rgba(240,165,0,0.15) 0%, transparent 50%);
+  }
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    position: relative; z-index: 1;
+  }
+  .stat-item {
+    text-align: center;
+    color: white;
+    padding: 40px 20px;
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: var(--radius);
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(10px);
+    transition: all var(--transition);
+  }
+  .stat-item:hover {
+    transform: translateY(-6px);
+    background: rgba(255,255,255,0.1);
+    border-color: var(--accent);
+  }
+  .stat-num {
+    font-family: var(--font-display);
+    font-size: clamp(3rem, 6vw, 5rem);
+    font-weight: 900;
+    color: var(--accent-light);
+    line-height: 1;
+    margin-bottom: 12px;
+  }
+  .stat-label {
+    font-size: 1rem; font-weight: 700;
+    margin-bottom: 8px;
+    color: rgba(255,255,255,0.95);
+  }
+  .stat-desc {
+    font-size: 0.85rem;
+    color: rgba(255,255,255,0.65);
+    line-height: 1.6;
+  }
+
+  /* ========== COMPARISON SECTION ========== */
+  .comparison-section { background: var(--bg-secondary); }
+  .comparison-grid {
+    display: grid; grid-template-columns: 1fr 80px 1fr;
+    gap: 0; align-items: stretch;
+  }
+  .comparison-col {
+    background: var(--bg-card);
+    border-radius: var(--radius);
+    overflow: hidden;
+    border: 2px solid var(--border);
+    transition: all var(--transition);
+  }
+  .comparison-col.committed { border-color: var(--primary); }
+  .comparison-col.uncommitted { border-color: #e05c5c; }
+  .comparison-col:hover { box-shadow: var(--shadow-lg); }
+  .comparison-header {
+    padding: 28px;
+    text-align: center;
+  }
+  .comparison-col.committed .comparison-header { background: linear-gradient(135deg, var(--primary), var(--primary-light)); }
+  .comparison-col.uncommitted .comparison-header { background: linear-gradient(135deg, #c0392b, #e74c3c); }
+  .comparison-header h3 {
+    font-family: var(--font-display);
+    font-size: 1.3rem; font-weight: 800;
+    color: white; margin-bottom: 8px;
+  }
+  .comparison-header .emoji { font-size: 2rem; }
+  .comparison-body { padding: 28px; }
+  .comparison-item {
+    display: flex; align-items: flex-start; gap: 12px;
+    padding: 14px 0;
+    border-bottom: 1px solid var(--border);
+    font-size: 0.95rem; color: var(--text-body);
+    transition: all var(--transition);
+  }
+  .comparison-item:last-child { border-bottom: none; }
+  .comparison-item:hover { color: var(--text-main); padding-right: 6px; }
+  .comparison-icon {
+    width: 28px; height: 28px; flex-shrink: 0;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 0.8rem; font-weight: 900;
+    margin-top: 2px;
+  }
+  .committed .comparison-icon { background: rgba(26,107,74,0.1); color: var(--primary); }
+  .uncommitted .comparison-icon { background: rgba(224,92,92,0.1); color: #e05c5c; }
+
+  .vs-center {
+    display: flex; align-items: center; justify-content: center;
+  }
+  .vs-badge {
+    width: 56px; height: 56px;
+    background: linear-gradient(135deg, var(--primary), var(--accent));
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-family: var(--font-display);
+    font-size: 1.1rem; font-weight: 900;
+    color: white;
+    box-shadow: 0 4px 20px rgba(26,107,74,0.3);
+  }
+
+  /* ========== HABITS SECTION ========== */
+  .habits-section { background: var(--bg); }
+  .habits-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+  }
+  .habit-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 28px 20px;
+    text-align: center;
+    transition: all var(--transition);
+    cursor: default;
+    position: relative; overflow: hidden;
+  }
+  .habit-card::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, var(--primary), var(--primary-light));
+    opacity: 0;
+    transition: opacity var(--transition);
+    z-index: 0;
+  }
+  .habit-card:hover::after { opacity: 1; }
+  .habit-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-lg); }
+  .habit-card:hover .habit-icon,
+  .habit-card:hover .habit-name,
+  .habit-card:hover .habit-time { color: white; }
+  .habit-icon, .habit-name, .habit-time { position: relative; z-index: 1; transition: color var(--transition); }
+  .habit-icon { font-size: 2.4rem; margin-bottom: 12px; display: block; }
+  .habit-name {
+    font-family: var(--font-display);
+    font-size: 1rem; font-weight: 700;
+    color: var(--text-main); margin-bottom: 6px;
+  }
+  .habit-time { font-size: 0.8rem; color: var(--text-muted); }
+
+  /* ========== SUCCESS STORIES ========== */
+  .stories-section { background: var(--bg-secondary); }
+  .stories-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 28px; }
+  .story-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 36px 28px;
+    transition: all var(--transition);
+    position: relative;
+  }
+  .story-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-lg); }
+  .story-quote {
+    font-size: 4rem;
+    line-height: 1;
+    color: var(--primary);
+    opacity: 0.2;
+    font-family: Georgia, serif;
+    position: absolute;
+    top: 16px; right: 24px;
+  }
+  .story-text {
+    font-size: 0.98rem;
+    color: var(--text-body);
+    line-height: 1.8;
+    margin-bottom: 24px;
+    font-style: italic;
+  }
+  .story-author { display: flex; align-items: center; gap: 14px; }
+  .story-avatar {
+    width: 52px; height: 52px; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.5rem;
+    background: var(--bg-secondary);
+    flex-shrink: 0;
+    border: 2px solid var(--border);
+  }
+  .story-name {
+    font-family: var(--font-display);
+    font-weight: 800; color: var(--text-main);
+    font-size: 0.95rem;
+  }
+  .story-role { font-size: 0.82rem; color: var(--text-muted); margin-top: 2px; }
+  .story-result {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: rgba(26,107,74,0.1);
+    color: var(--primary);
+    border: 1px solid var(--border);
+    padding: 4px 12px;
+    border-radius: 50px;
+    font-size: 0.78rem; font-weight: 700;
+    margin-top: 8px;
+  }
+
+  /* ========== QUOTES SECTION ========== */
+  .quotes-section {
+    background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 100%);
+    position: relative; overflow: hidden;
+  }
+  .quotes-section::before {
+    content: '';
+    position: absolute; inset: 0;
+    background-image:
+      radial-gradient(circle at 10% 90%, rgba(240,165,0,0.2) 0%, transparent 40%),
+      radial-gradient(circle at 90% 10%, rgba(255,255,255,0.05) 0%, transparent 40%);
+  }
+  .quotes-inner {
+    position: relative; z-index: 1;
+    text-align: center;
+    max-width: 800px; margin: 0 auto;
+  }
+  .quote-display {
+    min-height: 160px;
+    display: flex; align-items: center; justify-content: center;
+    flex-direction: column;
+  }
+  .quote-text {
+    font-family: var(--font-display);
+    font-size: clamp(1.3rem, 2.5vw, 2rem);
+    font-weight: 700;
+    color: white;
+    line-height: 1.5;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s ease;
+    margin-bottom: 20px;
+  }
+  .quote-text.visible { opacity: 1; transform: translateY(0); }
+  .quote-author {
+    font-size: 0.95rem;
+    color: var(--accent-light);
+    font-weight: 600;
+    opacity: 0;
+    transition: all 0.6s ease 0.2s;
+  }
+  .quote-author.visible { opacity: 1; }
+  .quote-dots {
+    display: flex; justify-content: center; gap: 8px;
+    margin-top: 32px;
+  }
+  .quote-dot {
+    width: 8px; height: 8px; border-radius: 50%;
+    background: rgba(255,255,255,0.3);
+    cursor: pointer;
+    transition: all var(--transition);
+  }
+  .quote-dot.active { background: var(--accent); width: 24px; border-radius: 4px; }
+
+  /* ========== FAQ SECTION ========== */
+  .faq-section { background: var(--bg); }
+  .faq-container { max-width: 780px; margin: 0 auto; }
+  .faq-item {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    margin-bottom: 16px;
+    overflow: hidden;
+    transition: all var(--transition);
+  }
+  .faq-item:hover { border-color: var(--primary); }
+  .faq-question {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 22px 28px;
+    cursor: pointer;
+    font-family: var(--font-display);
+    font-weight: 700; font-size: 1rem;
+    color: var(--text-main);
+    transition: color var(--transition);
+    user-select: none;
+  }
+  .faq-question:hover { color: var(--primary); }
+  .faq-toggle {
+    width: 32px; height: 32px;
+    background: var(--bg-secondary);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+    transition: all var(--transition);
+    font-size: 1.2rem;
+    color: var(--primary);
+  }
+  .faq-item.open .faq-toggle {
+    background: var(--primary);
+    color: white;
+    transform: rotate(45deg);
+  }
+  .faq-answer {
+    max-height: 0; overflow: hidden;
+    transition: max-height 0.4s ease, padding 0.3s ease;
+  }
+  .faq-answer-inner {
+    padding: 0 28px 24px;
+    font-size: 0.95rem;
+    color: var(--text-body);
+    line-height: 1.8;
+  }
+  .faq-item.open .faq-answer { max-height: 300px; }
+
+  /* ========== DAILY PLAN SECTION ========== */
+  .plan-section { background: var(--bg-secondary); }
+  .plan-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start; }
+  .plan-visual {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 36px;
+    position: sticky; top: 100px;
+  }
+  .plan-title {
+    font-family: var(--font-display);
+    font-size: 1.2rem; font-weight: 800;
+    color: var(--text-main); margin-bottom: 28px;
+    display: flex; align-items: center; gap: 10px;
+  }
+  .timeline { position: relative; }
+  .timeline::before {
+    content: '';
+    position: absolute;
+    top: 0; right: 22px;
+    width: 2px; height: 100%;
+    background: var(--border);
+  }
+  .timeline-item {
+    display: flex; gap: 20px;
+    margin-bottom: 20px;
+    position: relative;
+  }
+  .timeline-dot {
+    width: 44px; height: 44px; flex-shrink: 0;
+    border-radius: 50%;
+    background: var(--bg-secondary);
+    border: 2px solid var(--border);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.1rem;
+    transition: all var(--transition);
+    position: relative; z-index: 1;
+  }
+  .timeline-item:hover .timeline-dot {
+    background: var(--primary);
+    border-color: var(--primary);
+    transform: scale(1.1);
+  }
+  .timeline-content { padding-top: 8px; }
+  .timeline-time { font-size: 0.78rem; color: var(--primary); font-weight: 700; }
+  .timeline-label { font-size: 0.95rem; color: var(--text-body); font-weight: 600; }
+
+  .plan-steps { display: flex; flex-direction: column; gap: 20px; }
+  .plan-step {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 24px;
+    display: flex; gap: 20px; align-items: flex-start;
+    transition: all var(--transition);
+  }
+  .plan-step:hover { border-color: var(--primary); transform: translateX(-6px); box-shadow: var(--shadow); }
+  .step-num {
+    width: 44px; height: 44px; flex-shrink: 0;
+    border-radius: 12px;
+    background: linear-gradient(135deg, var(--primary), var(--primary-light));
+    color: white;
+    font-family: var(--font-display);
+    font-size: 1.1rem; font-weight: 900;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .step-title {
+    font-family: var(--font-display);
+    font-weight: 800; color: var(--text-main);
+    font-size: 1rem; margin-bottom: 6px;
+  }
+  .step-desc { font-size: 0.88rem; color: var(--text-muted); line-height: 1.6; }
+
+  /* ========== CONTACT SECTION ========== */
+  .contact-section { background: var(--bg); }
+  .contact-grid { display: grid; grid-template-columns: 1fr 1.5fr; gap: 60px; align-items: start; }
+  .contact-info { }
+  .contact-info h3 {
+    font-family: var(--font-display);
+    font-size: 1.6rem; font-weight: 800;
+    color: var(--text-main); margin-bottom: 16px;
+  }
+  .contact-info p {
+    color: var(--text-body); font-size: 0.98rem; line-height: 1.8; margin-bottom: 32px;
+  }
+  .contact-items { display: flex; flex-direction: column; gap: 16px; }
+  .contact-item {
+    display: flex; align-items: center; gap: 14px;
+    padding: 16px 20px;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    font-size: 0.92rem; color: var(--text-body);
+    transition: all var(--transition);
+  }
+  .contact-item:hover { border-color: var(--primary); color: var(--primary); }
+  .contact-item-icon {
+    font-size: 1.3rem; flex-shrink: 0;
+  }
+
+  .contact-form {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 40px;
+  }
+  .form-group { margin-bottom: 24px; }
+  .form-label {
+    display: block;
+    font-size: 0.88rem; font-weight: 700;
+    color: var(--text-main); margin-bottom: 8px;
+  }
+  .form-input,
+  .form-textarea {
+    width: 100%;
+    background: var(--bg-secondary);
+    border: 1.5px solid var(--border);
+    border-radius: var(--radius-sm);
+    padding: 14px 18px;
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    color: var(--text-main);
+    transition: all var(--transition);
+    outline: none;
+    direction: rtl;
+  }
+  .form-input:focus,
+  .form-textarea:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(26,107,74,0.1);
+    background: var(--bg-card);
+  }
+  .form-textarea { min-height: 140px; resize: vertical; }
+  .form-submit {
+    width: 100%;
+    background: linear-gradient(135deg, var(--primary), var(--primary-light));
+    color: white;
+    border: none; cursor: pointer;
+    padding: 16px;
+    border-radius: var(--radius-sm);
+    font-family: var(--font-display);
+    font-size: 1.05rem; font-weight: 800;
+    transition: all var(--transition);
+    display: flex; align-items: center; justify-content: center; gap: 8px;
+  }
+  .form-submit:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(26,107,74,0.35); }
+  .form-submit:active { transform: translateY(0); }
+  .form-success {
+    display: none;
+    text-align: center;
+    padding: 40px;
+  }
+  .form-success.show { display: block; }
+  .success-icon { font-size: 4rem; margin-bottom: 16px; }
+  .success-title {
+    font-family: var(--font-display);
+    font-size: 1.4rem; font-weight: 800;
+    color: var(--primary); margin-bottom: 8px;
+  }
+
+  /* ========== FOOTER ========== */
+  footer {
+    background: var(--primary-dark);
+    color: rgba(255,255,255,0.8);
+    padding: 60px 0 30px;
+  }
+  .footer-grid {
+    display: grid; grid-template-columns: 1.5fr 1fr 1fr;
+    gap: 40px; margin-bottom: 40px;
+  }
+  .footer-brand { }
+  .footer-logo {
+    display: flex; align-items: center; gap: 10px;
+    margin-bottom: 16px;
+    font-family: var(--font-display);
+    font-size: 1.3rem; font-weight: 800;
+    color: white;
+  }
+  .footer-brand p {
+    font-size: 0.9rem; line-height: 1.7;
+    color: rgba(255,255,255,0.6);
+  }
+  .footer-heading {
+    font-family: var(--font-display);
+    font-weight: 800; color: white;
+    font-size: 1rem; margin-bottom: 20px;
+  }
+  .footer-links { display: flex; flex-direction: column; gap: 10px; }
+  .footer-links a {
+    font-size: 0.88rem;
+    color: rgba(255,255,255,0.6);
+    transition: color var(--transition);
+  }
+  .footer-links a:hover { color: var(--accent-light); }
+  .footer-bottom {
+    border-top: 1px solid rgba(255,255,255,0.1);
+    padding-top: 24px;
+    display: flex; align-items: center; justify-content: space-between;
+    flex-wrap: wrap; gap: 12px;
+    font-size: 0.85rem;
+    color: rgba(255,255,255,0.4);
+  }
+  .footer-bottom strong { color: var(--accent-light); }
+
+  /* ========== BACK TO TOP ========== */
+  #back-top {
+    position: fixed; bottom: 28px; left: 28px;
+    width: 48px; height: 48px;
+    background: var(--primary);
+    color: white;
+    border: none; border-radius: 50%;
+    cursor: pointer; font-size: 1.3rem;
+    display: flex; align-items: center; justify-content: center;
+    box-shadow: 0 4px 16px rgba(26,107,74,0.4);
+    opacity: 0; visibility: hidden;
+    transition: all var(--transition);
+    z-index: 500;
+  }
+  #back-top.visible { opacity: 1; visibility: visible; }
+  #back-top:hover { background: var(--primary-light); transform: translateY(-4px); }
+
+  /* ========== ANIMATIONS ========== */
+  @keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-24px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(40px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  .reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+  .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .reveal-delay-1 { transition-delay: 0.1s; }
+  .reveal-delay-2 { transition-delay: 0.2s; }
+  .reveal-delay-3 { transition-delay: 0.3s; }
+  .reveal-delay-4 { transition-delay: 0.4s; }
+
+  /* ========== RESPONSIVE ========== */
+  @media (max-width: 900px) {
+    section { padding: 70px 0; }
+    .hero-content { grid-template-columns: 1fr; text-align: center; }
+    .hero-actions { justify-content: center; }
+    .hero-visual { max-width: 480px; margin: 0 auto; }
+    .stats-grid { grid-template-columns: 1fr 1fr; gap: 20px; }
+    .stats-grid .stat-item:last-child { grid-column: span 2; }
+    .comparison-grid { grid-template-columns: 1fr; gap: 16px; }
+    .vs-center { display: none; }
+    .plan-grid { grid-template-columns: 1fr; }
+    .plan-visual { position: static; }
+    .contact-grid { grid-template-columns: 1fr; }
+    .footer-grid { grid-template-columns: 1fr 1fr; }
+  }
+  @media (max-width: 640px) {
+    .nav-links { display: none; }
+    .hamburger { display: flex; }
+    .hero-title { font-size: 1.8rem; }
+    .stats-grid { grid-template-columns: 1fr; }
+    .stats-grid .stat-item:last-child { grid-column: span 1; }
+    .hero-stats { grid-template-columns: 1fr 1fr; }
+    .hero-stats .hero-stat:last-child { grid-column: span 2; }
+    .footer-grid { grid-template-columns: 1fr; }
+    .contact-form { padding: 24px; }
+    .footer-bottom { flex-direction: column; text-align: center; }
+  }
+</style>
+</head>
+<body>
+
+<!-- LOADER -->
+<div id="loader">
+  <div class="loader-inner">
+    <div class="loader-ring"></div>
+    <div class="loader-text">جارٍ التحميل...</div>
+  </div>
+</div>
+
+<!-- NAVBAR -->
+<nav id="navbar">
+  <div class="nav-inner">
+    <a href="#" class="logo">
+      <div class="logo-icon">🌿</div>
+      قوة الالتزام
+    </a>
+    <div class="nav-links">
+      <a href="#benefits">الفوائد</a>
+      <a href="#stats">إحصائيات</a>
+      <a href="#habits">العادات</a>
+      <a href="#stories">قصص نجاح</a>
+      <a href="#faq">أسئلة شائعة</a>
+      <a href="#contact">تواصل</a>
+    </div>
+    <div class="nav-actions">
+      <button class="btn-theme" id="theme-toggle" title="تبديل المظهر">🌙</button>
+      <button class="btn-primary" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">ابدأ الآن</button>
+    </div>
+    <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobile-menu">
+  <a href="#benefits" onclick="toggleMenu()">الفوائد</a>
+  <a href="#stats" onclick="toggleMenu()">إحصائيات</a>
+  <a href="#habits" onclick="toggleMenu()">العادات</a>
+  <a href="#stories" onclick="toggleMenu()">قصص نجاح</a>
+  <a href="#faq" onclick="toggleMenu()">أسئلة شائعة</a>
+  <a href="#contact" onclick="toggleMenu()">تواصل معنا</a>
+</div>
+
+<!-- ===== HERO ===== -->
+<section class="hero" id="home">
+  <div class="hero-bg"></div>
+  <div class="hero-pattern"></div>
+  <div class="hero-grid"></div>
+  <div class="hero-content">
+    <div class="hero-text">
+      <div class="hero-badge"><span>🚀</span> ابدأ رحلتك اليوم</div>
+      <h1 class="hero-title">
+        <span class="highlight">الالتزام اليومي</span><br>
+        هو الفرق بين<br>
+        الأحلام والإنجازات
+      </h1>
+      <p class="hero-desc">
+        لا يحتاج النجاح إلى موهبة استثنائية — بل يحتاج إلى خطوة صغيرة، كل يوم، بلا توقف. حين تلتزم اليوم، تصنع النسخة الأفضل من نفسك غداً.
+      </p>
+      <div class="hero-actions">
+        <button class="btn-hero" onclick="document.getElementById('benefits').scrollIntoView({behavior:'smooth'})">
+          🌟 ابدأ رحلتك الآن
+        </button>
+        <button class="btn-hero-outline" onclick="document.getElementById('stories').scrollIntoView({behavior:'smooth'})">
+          📖 اقرأ قصص النجاح
+        </button>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-card">
+        <div class="hero-card-title">📈 تقدمك خلال عام</div>
+        <div class="progress-item">
+          <div class="progress-label"><span>الصحة الجسدية</span><span id="p1">0%</span></div>
+          <div class="progress-bar"><div class="progress-fill" data-value="88" id="pf1"></div></div>
+        </div>
+        <div class="progress-item">
+          <div class="progress-label"><span>الإنتاجية المهنية</span><span id="p2">0%</span></div>
+          <div class="progress-bar"><div class="progress-fill" data-value="92" id="pf2"></div></div>
+        </div>
+        <div class="progress-item">
+          <div class="progress-label"><span>التوازن النفسي</span><span id="p3">0%</span></div>
+          <div class="progress-bar"><div class="progress-fill" data-value="76" id="pf3"></div></div>
+        </div>
+        <div class="progress-item">
+          <div class="progress-label"><span>الاستقرار المالي</span><span id="p4">0%</span></div>
+          <div class="progress-bar"><div class="progress-fill" data-value="65" id="pf4"></div></div>
+        </div>
+        <div class="hero-stats">
+          <div class="hero-stat">
+            <div class="hero-stat-num">365</div>
+            <div class="hero-stat-label">يوم</div>
+          </div>
+          <div class="hero-stat">
+            <div class="hero-stat-num">1%</div>
+            <div class="hero-stat-label">تحسن يومي</div>
+          </div>
+          <div class="hero-stat">
+            <div class="hero-stat-num">37x</div>
+            <div class="hero-stat-label">نمو سنوي</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="scroll-indicator">
+    <span>اكتشف أكثر</span>
+    <div class="scroll-arrow"></div>
+  </div>
+</section>
+
+<!-- ===== BENEFITS ===== -->
+<section class="benefits" id="benefits">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="section-tag">✨ لماذا الالتزام؟</div>
+      <h2 class="section-title">فوائد <span class="accent">تغير حياتك</span></h2>
+      <p class="section-desc">حين تلتزم بشكل يومي، تنعكس آثاره على كل جوانب حياتك</p>
+      <div class="section-divider"></div>
+    </div>
+    <div class="benefits-grid">
+      <div class="benefit-card reveal reveal-delay-1" style="--card-color:#1a6b4a;--card-bg:rgba(26,107,74,0.08)">
+        <div class="benefit-icon">💪</div>
+        <div class="benefit-title">تحسين الصحة الجسدية</div>
+        <ul class="benefit-list">
+          <li class="benefit-item">تحسين التغذية والنظام الغذائي</li>
+          <li class="benefit-item">خسارة الوزن الزائد تدريجياً</li>
+          <li class="benefit-item">زيادة مستوى الطاقة اليومية</li>
+          <li class="benefit-item">تقوية المناعة وتحسين النوم</li>
+        </ul>
+      </div>
+      <div class="benefit-card reveal reveal-delay-2" style="--card-color:#2980b9;--card-bg:rgba(41,128,185,0.08)">
+        <div class="benefit-icon">🎓</div>
+        <div class="benefit-title">النجاح الدراسي</div>
+        <ul class="benefit-list">
+          <li class="benefit-item">زيادة التركيز والاستيعاب</li>
+          <li class="benefit-item">تحسين الدرجات والتحصيل</li>
+          <li class="benefit-item">تسريع عملية التعلم</li>
+          <li class="benefit-item">إدارة ذكية لوقت المذاكرة</li>
+        </ul>
+      </div>
+      <div class="benefit-card reveal reveal-delay-3" style="--card-color:#8e44ad;--card-bg:rgba(142,68,173,0.08)">
+        <div class="benefit-icon">💼</div>
+        <div class="benefit-title">النجاح المهني</div>
+        <ul class="benefit-list">
+          <li class="benefit-item">زيادة الإنتاجية وجودة العمل</li>
+          <li class="benefit-item">تحسين الأداء والكفاءة</li>
+          <li class="benefit-item">فرص أكبر للترقية والتطور</li>
+          <li class="benefit-item">بناء سمعة مهنية متميزة</li>
+        </ul>
+      </div>
+      <div class="benefit-card reveal reveal-delay-4" style="--card-color:#e67e22;--card-bg:rgba(230,126,34,0.08)">
+        <div class="benefit-icon">🧠</div>
+        <div class="benefit-title">الاستقرار النفسي</div>
+        <ul class="benefit-list">
+          <li class="benefit-item">تقليل التوتر والقلق اليومي</li>
+          <li class="benefit-item">زيادة الثقة بالنفس</li>
+          <li class="benefit-item">تحسين جودة الحياة العامة</li>
+          <li class="benefit-item">شعور أعمق بالرضا والسعادة</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== STATS ===== -->
+<section class="stats-section" id="stats">
+  <div class="container">
+    <div class="section-header reveal" style="margin-bottom:60px">
+      <div class="section-tag" style="background:rgba(255,255,255,0.1);color:var(--accent-light);border-color:rgba(255,255,255,0.2)">📊 بالأرقام</div>
+      <h2 class="section-title" style="color:white">الحقائق التي <span style="color:var(--accent-light)">لا تكذب</span></h2>
+      <p class="section-desc" style="color:rgba(255,255,255,0.7)">العلم والتجربة يثبتان قوة الالتزام اليومي</p>
+      <div class="section-divider"></div>
+    </div>
+    <div class="stats-grid">
+      <div class="stat-item reveal reveal-delay-1">
+        <div class="stat-num counter" data-target="30">0</div>
+        <div class="stat-label">يومًا لبناء عادة جديدة</div>
+        <div class="stat-desc">الأبحاث تثبت أن الدماغ يحتاج ٣٠ يوماً تقريباً لترسيخ سلوك جديد كعادة راسخة</div>
+      </div>
+      <div class="stat-item reveal reveal-delay-2">
+        <div class="stat-num counter" data-target="365">0</div>
+        <div class="stat-label">يومًا يغير حياتك بالكامل</div>
+        <div class="stat-desc">عام واحد من الالتزام اليومي يُحوّل كل جانب من جوانب حياتك تحولاً حقيقياً</div>
+      </div>
+      <div class="stat-item reveal reveal-delay-3">
+        <div class="stat-num">37x</div>
+        <div class="stat-label">النمو بتحسن ١٪ يومياً</div>
+        <div class="stat-desc">تحسن ١٪ كل يوم يعني بعد عام أن تكون أفضل بـ ٣٧ مرة مما كنت عليه — هذا هو مركب التقدم</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== COMPARISON ===== -->
+<section class="comparison-section" id="comparison">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="section-tag">⚖️ المقارنة</div>
+      <h2 class="section-title">ما الفرق <span class="accent">بين الشخصيتين؟</span></h2>
+      <p class="section-desc">نظرة واقعية على كيف يؤثر الالتزام على مسار الحياة</p>
+      <div class="section-divider"></div>
+    </div>
+    <div class="comparison-grid reveal">
+      <div class="comparison-col committed">
+        <div class="comparison-header">
+          <div class="emoji">🦅</div>
+          <h3>الشخص الملتزم</h3>
+        </div>
+        <div class="comparison-body">
+          <div class="comparison-item">
+            <div class="comparison-icon">✓</div>
+            يستيقظ في موعد ثابت كل يوم ويبدأ بنشاط
+          </div>
+          <div class="comparison-item">
+            <div class="comparison-icon">✓</div>
+            يمارس الرياضة بانتظام ويهتم بصحته
+          </div>
+          <div class="comparison-item">
+            <div class="comparison-icon">✓</div>
+            يتعلم مهارة جديدة كل شهر ويطور نفسه
+          </div>
+          <div class="comparison-item">
+            <div class="comparison-icon">✓</div>
+            يخطط ليومه ويحقق أهدافه بمنهجية
+          </div>
+          <div class="comparison-item">
+            <div class="comparison-icon">✓</div>
+            يحقق أهدافه بثبات ويتقدم باستمرار
+          </div>
+          <div class="comparison-item">
+            <div class="comparison-icon">✓</div>
+            يشعر بالرضا والإنجاز في نهاية كل يوم
+          </div>
+        </div>
+      </div>
+      <div class="vs-center">
+        <div class="vs-badge">VS</div>
+      </div>
+      <div class="comparison-col uncommitted">
+        <div class="comparison-header">
+          <div class="emoji">😴</div>
+          <h3>الشخص غير الملتزم</h3>
+        </div>
+        <div class="comparison-body">
+          <div class="comparison-item">
+            <div class="comparison-icon">✗</div>
+            يؤجل الاستيقاظ ويبدأ يومه بتأخر وكسل
+          </div>
+          <div class="comparison-item">
+            <div class="comparison-icon">✗</div>
+            يهمل صحته ويعيش نمطاً غير صحي
+          </div>
+          <div class="comparison-item">
+            <div class="comparison-icon">✗</div>
+            يتأخر عن ركب التطور ويبقى في مكانه
+          </div>
+          <div class="comparison-item">
+            <div class="comparison-icon">✗</div>
+            يهدر وقته ويشعر دائماً بضيق الوقت
+          </div>
+          <div class="comparison-item">
+            <div class="comparison-icon">✗</div>
+            يتراجع ببطء نحو أهداف لا تتحقق
+          </div>
+          <div class="comparison-item">
+            <div class="comparison-icon">✗</div>
+            يعيش في دوامة الفوضى والندم المتكرر
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== HABITS ===== -->
+<section class="habits-section" id="habits">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="section-tag">📋 عاداتك اليومية</div>
+      <h2 class="section-title">العادات التي <span class="accent">تصنع الفارق</span></h2>
+      <p class="section-desc">ابدأ بعادة واحدة، ثم أضف تدريجياً. الثبات أهم من الكمال</p>
+      <div class="section-divider"></div>
+    </div>
+    <div class="habits-grid">
+      <div class="habit-card reveal reveal-delay-1">
+        <span class="habit-icon">🕌</span>
+        <div class="habit-name">أداء الصلوات</div>
+        <div class="habit-time">في أوقاتها المحددة</div>
+      </div>
+      <div class="habit-card reveal reveal-delay-1">
+        <span class="habit-icon">🏃</span>
+        <div class="habit-name">ممارسة الرياضة</div>
+        <div class="habit-time">٣٠ دقيقة يومياً</div>
+      </div>
+      <div class="habit-card reveal reveal-delay-2">
+        <span class="habit-icon">💧</span>
+        <div class="habit-name">شرب الماء</div>
+        <div class="habit-time">٨ أكواب على الأقل</div>
+      </div>
+      <div class="habit-card reveal reveal-delay-2">
+        <span class="habit-icon">📚</span>
+        <div class="habit-name">التعلم اليومي</div>
+        <div class="habit-time">٣٠ دقيقة للتطوير</div>
+      </div>
+      <div class="habit-card reveal reveal-delay-3">
+        <span class="habit-icon">😴</span>
+        <div class="habit-name">النوم المنتظم</div>
+        <div class="habit-time">٧-٨ ساعات ليلاً</div>
+      </div>
+      <div class="habit-card reveal reveal-delay-3">
+        <span class="habit-icon">📖</span>
+        <div class="habit-name">القراءة</div>
+        <div class="habit-time">١٠ صفحات يومياً</div>
+      </div>
+      <div class="habit-card reveal reveal-delay-4">
+        <span class="habit-icon">📵</span>
+        <div class="habit-name">إدارة المشتتات</div>
+        <div class="habit-time">بعيداً عن الهاتف</div>
+      </div>
+      <div class="habit-card reveal reveal-delay-4">
+        <span class="habit-icon">🎯</span>
+        <div class="habit-name">تحديد الأهداف</div>
+        <div class="habit-time">أهداف يومية وأسبوعية</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== HOW TO START ===== -->
+<section class="plan-section" id="plan">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="section-tag">🗺️ كيف تبدأ؟</div>
+      <h2 class="section-title">خطوات <span class="accent">رحلتك</span></h2>
+      <p class="section-desc">منهج عملي ومجرب لتبدأ رحلة الالتزام بشكل صحيح ومستدام</p>
+      <div class="section-divider"></div>
+    </div>
+    <div class="plan-grid">
+      <div class="plan-steps reveal">
+        <div class="plan-step">
+          <div class="step-num">١</div>
+          <div>
+            <div class="step-title">حدد هدفاً واحداً واضحاً</div>
+            <div class="step-desc">لا تبدأ بعشر عادات دفعة واحدة. اختر هدفاً واحداً مهماً وابنِ حوله التزامك الأول.</div>
+          </div>
+        </div>
+        <div class="plan-step">
+          <div class="step-num">٢</div>
+          <div>
+            <div class="step-title">اجعله صغيراً في البداية</div>
+            <div class="step-desc">٥ دقائق رياضة أفضل من الصفر. ١٠ صفحات قراءة أفضل من لا شيء. الثبات يتفوق دائماً على الكمال.</div>
+          </div>
+        </div>
+        <div class="plan-step">
+          <div class="step-num">٣</div>
+          <div>
+            <div class="step-title">اربط العادة بوقت ثابت</div>
+            <div class="step-desc">حدد وقتاً محدداً في يومك لكل عادة. "بعد الفجر مباشرة" أقوى من "سأفعله في أي وقت".</div>
+          </div>
+        </div>
+        <div class="plan-step">
+          <div class="step-num">٤</div>
+          <div>
+            <div class="step-title">تتبع تقدمك وسجّله</div>
+            <div class="step-desc">احتفل بكل يوم تلتزم فيه. رؤية سلسلة أيامك المتتالية ستمنحك دافعاً قوياً للاستمرار.</div>
+          </div>
+        </div>
+        <div class="plan-step">
+          <div class="step-num">٥</div>
+          <div>
+            <div class="step-title">لا تكسر السلسلة مرتين</div>
+            <div class="step-desc">إن فاتك يوم، تعافَ في اليوم التالي فوراً. الفشل في يوم واحد لا يعني الفشل في الرحلة كلها.</div>
+          </div>
+        </div>
+      </div>
+      <div class="plan-visual reveal">
+        <div class="plan-title">⏰ جدول يومي مثالي</div>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-dot">🕔</div>
+            <div class="timeline-content">
+              <div class="timeline-time">٥:٠٠ ص</div>
+              <div class="timeline-label">الاستيقاظ المبكر + الفجر</div>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot">🏃</div>
+            <div class="timeline-content">
+              <div class="timeline-time">٥:٣٠ ص</div>
+              <div class="timeline-label">ممارسة الرياضة الصباحية</div>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot">📖</div>
+            <div class="timeline-content">
+              <div class="timeline-time">٧:٠٠ ص</div>
+              <div class="timeline-label">القراءة أو التعلم</div>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot">💼</div>
+            <div class="timeline-content">
+              <div class="timeline-time">٨:٠٠ ص</div>
+              <div class="timeline-label">وقت العمل / الدراسة</div>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot">🌙</div>
+            <div class="timeline-content">
+              <div class="timeline-time">٢١:٣٠ م</div>
+              <div class="timeline-label">مراجعة اليوم + التخطيط</div>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot">😴</div>
+            <div class="timeline-content">
+              <div class="timeline-time">٢٢:٠٠ م</div>
+              <div class="timeline-label">وقت النوم المنتظم</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== STORIES ===== -->
+<section class="stories-section" id="stories">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="section-tag">🌟 قصص حقيقية</div>
+      <h2 class="section-title">حياة <span class="accent">تغيرت فعلاً</span></h2>
+      <p class="section-desc">هؤلاء أشخاص عاديون اتخذوا قراراً بالالتزام — فتغيرت حياتهم</p>
+      <div class="section-divider"></div>
+    </div>
+    <div class="stories-grid">
+      <div class="story-card reveal reveal-delay-1">
+        <div class="story-quote">"</div>
+        <p class="story-text">
+          كنت أستيقظ كل يوم بلا هدف، أتصفح الهاتف لساعات وأؤجل كل شيء. قررت يوماً أن ألتزم بنظام يومي بسيط لمدة ٣ أشهر. الآن أنا موظف مميز في شركتي وحصلت على ترقية لم أكن أتخيلها.
+        </p>
+        <div class="story-author">
+          <div class="story-avatar">👨</div>
+          <div>
+            <div class="story-name">أحمد محمد</div>
+            <div class="story-role">مهندس تقنية معلومات، ٢٨ سنة</div>
+            <div class="story-result">🚀 ترقية في ٦ أشهر</div>
+          </div>
+        </div>
+      </div>
+      <div class="story-card reveal reveal-delay-2">
+        <div class="story-quote">"</div>
+        <p class="story-text">
+          وزنت ١٠٥ كيلو وكنت أعاني من ضيق في التنفس مع أي مجهود بسيط. التزمت بالمشي يومياً والأكل الصحي فقط. بعد سنة، وزني ٨٠ كيلو وأركض نصف ماراثون. الالتزام أنقذ حياتي حرفياً.
+        </p>
+        <div class="story-author">
+          <div class="story-avatar">👩</div>
+          <div>
+            <div class="story-name">سارة عبدالله</div>
+            <div class="story-role">محاسبة، ٣٤ سنة</div>
+            <div class="story-result">💪 خسرت ٢٥ كيلو في سنة</div>
+          </div>
+        </div>
+      </div>
+      <div class="story-card reveal reveal-delay-3">
+        <div class="story-quote">"</div>
+        <p class="story-text">
+          رسبت في الفصل الدراسي الأول بسبب عدم الانتظام في الدراسة والإدمان على الألعاب. قررت التغيير. التزمت بمذاكرة ٤ ساعات يومياً وابتعدت عن المشتتات. أنهيت السنة بمعدل ٩٢٪ وكنت الأول على دفعتي.
+        </p>
+        <div class="story-author">
+          <div class="story-avatar">🧑</div>
+          <div>
+            <div class="story-name">خالد العمري</div>
+            <div class="story-role">طالب جامعي، ٢١ سنة</div>
+            <div class="story-result">🎓 الأول على دفعته</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== QUOTES ===== -->
+<section class="quotes-section" id="quotes">
+  <div class="container">
+    <div class="quotes-inner">
+      <div class="quote-display">
+        <div class="quote-text" id="quote-text"></div>
+        <div class="quote-author" id="quote-author"></div>
+      </div>
+      <div class="quote-dots" id="quote-dots"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FAQ ===== -->
+<section class="faq-section" id="faq">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="section-tag">❓ أسئلة شائعة</div>
+      <h2 class="section-title">إجابات على <span class="accent">أسئلتك</span></h2>
+      <p class="section-desc">كل ما تريد معرفته قبل أن تبدأ رحلتك</p>
+      <div class="section-divider"></div>
+    </div>
+    <div class="faq-container reveal">
+      <div class="faq-item">
+        <div class="faq-question">
+          <span>كيف أبدأ الالتزام لأول مرة؟</span>
+          <div class="faq-toggle">+</div>
+        </div>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            ابدأ بشيء واحد صغير جداً لا يمكن أن تُخفق فيه. مثلاً: اقرأ صفحة واحدة يومياً، أو امشِ ١٠ دقائق فقط. المفتاح هو بناء عادة الثبات أولاً، ثم تزيد الكمية تدريجياً. لا تنتظر اليوم المثالي — ابدأ الآن بأي شيء.
+          </div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">
+          <span>ماذا أفعل إذا فشلت يوماً ولم ألتزم؟</span>
+          <div class="faq-toggle">+</div>
+        </div>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            القاعدة الذهبية: لا تكسر السلسلة مرتين متتاليتين. الفشل في يوم واحد لا يمثل مشكلة — إنه جزء طبيعي من الرحلة. المشكلة تكون حين تستسلم تماماً. عُد في اليوم التالي بنفس القوة. تذكر: التواصل أهم من الكمال.
+          </div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">
+          <span>كيف أحافظ على الاستمرارية على المدى الطويل؟</span>
+          <div class="faq-toggle">+</div>
+        </div>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            اربط العادة بمحفز (مكافأة صغيرة)، تتبع تقدمك بجدول مرئي، أخبر شخصاً تحبه بالتزامك ليحاسبك، وذكّر نفسك دائماً بسبب البداية. بعد ٣٠ يوماً ستصبح العادة أسهل بكثير لأن الدماغ يكون قد اعتاد عليها.
+          </div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">
+          <span>كم عدد العادات التي يمكنني بناؤها في نفس الوقت؟</span>
+          <div class="faq-toggle">+</div>
+        </div>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            يُنصح بالبدء بعادة واحدة أو اثنتين فقط. الإرادة والطاقة الذهنية محدودة، وتوزيعها على عادات كثيرة دفعة واحدة يضعف جميعها. بعد أن تترسخ العادة الأولى خلال ٣٠-٦٠ يوماً، أضف عادة أخرى. الصبر على البناء التدريجي هو سر النجاح.
+          </div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">
+          <span>هل يمكنني التغيير في أي عمر؟</span>
+          <div class="faq-toggle">+</div>
+        </div>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            بالتأكيد. الدماغ البشري يمتلك مرونة مذهلة طوال الحياة تُعرف بـ"المرونة العصبية". كثيرون غيّروا حياتهم في الأربعينات والخمسينات وما بعدها. السن ليس عذراً — الإرادة والبدء الآن هما الأمر الوحيد المهم.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CONTACT ===== -->
+<section class="contact-section" id="contact">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="section-tag">📬 تواصل معنا</div>
+      <h2 class="section-title">نحن <span class="accent">هنا لك</span></h2>
+      <p class="section-desc">لديك سؤال أو قصة نجاح تودّ مشاركتها؟ نحب أن نسمع منك</p>
+      <div class="section-divider"></div>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-info reveal">
+        <h3>تواصل مع مجتمعنا</h3>
+        <p>نحن هنا لدعمك في رحلة الالتزام. سواء كان لديك سؤال أو تريد مشاركة تجربتك أو طلب نصيحة — راسلنا بكل ثقة.</p>
+        <div class="contact-items">
+          <div class="contact-item">
+            <div class="contact-item-icon">📧</div>
+            <span>info@commitment-power.com</span>
+          </div>
+          <div class="contact-item">
+            <div class="contact-item-icon">💬</div>
+            <span>مجتمع داعم من الملتزمين</span>
+          </div>
+          <div class="contact-item">
+            <div class="contact-item-icon">🕐</div>
+            <span>نرد في خلال ٢٤ ساعة</span>
+          </div>
+        </div>
+      </div>
+      <div class="contact-form reveal">
+        <div id="form-body">
+          <div class="form-group">
+            <label class="form-label">الاسم الكامل</label>
+            <input type="text" class="form-input" id="fname" placeholder="اكتب اسمك هنا">
+          </div>
+          <div class="form-group">
+            <label class="form-label">البريد الإلكتروني</label>
+            <input type="email" class="form-input" id="femail" placeholder="example@email.com" dir="ltr" style="text-align:right">
+          </div>
+          <div class="form-group">
+            <label class="form-label">رسالتك</label>
+            <textarea class="form-textarea" id="fmessage" placeholder="شاركنا قصتك أو سؤالك..."></textarea>
+          </div>
+          <button class="form-submit" onclick="submitForm()">
+            🚀 أرسل الرسالة
+          </button>
+        </div>
+        <div class="form-success" id="form-success">
+          <div class="success-icon">🎉</div>
+          <div class="success-title">تم الإرسال بنجاح!</div>
+          <p style="color:var(--text-body);font-size:0.95rem;line-height:1.7">شكراً لك. سنتواصل معك في أقرب وقت ممكن. استمر في رحلتك — أنت على الطريق الصحيح! 🌟</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo">
+          <span>🌿</span> قوة الالتزام
+        </div>
+        <p>منصة توعوية تساعدك على بناء عادات إيجابية وتحقيق أهدافك من خلال الالتزام اليومي والانضباط الذاتي.</p>
+      </div>
+      <div>
+        <div class="footer-heading">روابط سريعة</div>
+        <div class="footer-links">
+          <a href="#benefits">فوائد الالتزام</a>
+          <a href="#stats">الإحصائيات</a>
+          <a href="#habits">العادات اليومية</a>
+          <a href="#stories">قصص النجاح</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-heading">المزيد</div>
+        <div class="footer-links">
+          <a href="#plan">كيف تبدأ؟</a>
+          <a href="#faq">أسئلة شائعة</a>
+          <a href="#contact">تواصل معنا</a>
+          <a href="#">سياسة الخصوصية</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© ٢٠٢٥ <strong>قوة الالتزام</strong>. جميع الحقوق محفوظة.</span>
+      <span>صُنع بـ ❤️ لكل إنسان يريد التغيير</span>
+    </div>
+  </div>
+</footer>
+
+<!-- BACK TO TOP -->
+<button id="back-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="العودة للأعلى">↑</button>
+
+<!-- ===== SCRIPTS ===== -->
+<script>
+// ---- LOADER ----
+window.addEventListener('load', () => {
+  setTimeout(() => {
+    document.getElementById('loader').classList.add('hidden');
+    // Trigger progress bars
+    document.querySelectorAll('.progress-fill').forEach(el => {
+      const v = el.getAttribute('data-value');
+      el.style.width = v + '%';
+    });
+    // Animate progress labels
+    animateValue('p1', 0, 88, 1500, '%');
+    animateValue('p2', 0, 92, 1500, '%');
+    animateValue('p3', 0, 76, 1500, '%');
+    animateValue('p4', 0, 65, 1500, '%');
+  }, 800);
+});
+
+// ---- NAVBAR SCROLL ----
+window.addEventListener('scroll', () => {
+  const nav = document.getElementById('navbar');
+  nav.classList.toggle('scrolled', window.scrollY > 60);
+  document.getElementById('back-top').classList.toggle('visible', window.scrollY > 400);
+});
+
+// ---- MOBILE MENU ----
+function toggleMenu() {
+  document.getElementById('mobile-menu').classList.toggle('open');
+}
+
+// ---- DARK MODE ----
+const themeBtn = document.getElementById('theme-toggle');
+let dark = false;
+themeBtn.addEventListener('click', () => {
+  dark = !dark;
+  document.documentElement.setAttribute('data-theme', dark ? 'dark' : '');
+  themeBtn.textContent = dark ? '☀️' : '🌙';
+});
+
+// ---- SCROLL REVEAL ----
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible'); });
+}, { threshold: 0.12 });
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+// ---- COUNTER ANIMATION ----
+function animateValue(id, start, end, dur, suffix='') {
+  const el = document.getElementById(id);
+  if (!el) return;
+  let s = null;
+  const step = (ts) => {
+    if (!s) s = ts;
+    const prog = Math.min((ts - s) / dur, 1);
+    const val = Math.floor(prog * (end - start) + start);
+    el.textContent = val + suffix;
+    if (prog < 1) requestAnimationFrame(step);
+  };
+  requestAnimationFrame(step);
+}
+
+const counterObs = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      const t = parseInt(e.target.getAttribute('data-target'));
+      const id = e.target.id || '_tmp';
+      e.target.id = id;
+      animateValue(id, 0, t, 2000);
+      counterObs.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.5 });
+document.querySelectorAll('.counter').forEach((el, i) => { el.id = 'counter_' + i; counterObs.observe(el); });
+
+// ---- FAQ ACCORDION ----
+document.querySelectorAll('.faq-question').forEach(q => {
+  q.addEventListener('click', () => {
+    const item = q.parentElement;
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item.open').forEach(i => i.classList.remove('open'));
+    if (!isOpen) item.classList.add('open');
+  });
+});
+
+// ---- QUOTES ROTATOR ----
+const quotes = [
+  { text: "النجاح ليس عن الكمال — بل عن الاتساق. التقدم الصغير كل يوم يصنع نتائج كبيرة بمرور الوقت.", author: "— جيمس كلير، كتاب العادات الذرية" },
+  { text: "الانضباط هو الجسر بين الأهداف والإنجازات.", author: "— جيم رون، خبير التطوير الذاتي" },
+  { text: "لا تنتظر الدافع لتبدأ. ابدأ أنت، وسيأتي الدافع تلقائياً.", author: "— مبدأ التصرف أولاً" },
+  { text: "كل ما تريده في الجانب الآخر من الانضباط.", author: "— جيم أوون" },
+  { text: "الشخص الذي تكون عليه في اليوم الخامس والعشرين لا يختار المسار — بل يسلكه تلقائياً.", author: "— حكمة الالتزام" },
+  { text: "الوقت سيمر في كل حال. السؤال: هل ستكون أفضل في نهايته أم لا؟", author: "— من وحي التغيير" }
+];
+let qIdx = 0;
+const qText = document.getElementById('quote-text');
+const qAuthor = document.getElementById('quote-author');
+const qDots = document.getElementById('quote-dots');
+
+function buildDots() {
+  qDots.innerHTML = '';
+  quotes.forEach((_, i) => {
+    const d = document.createElement('div');
+    d.className = 'quote-dot' + (i === 0 ? ' active' : '');
+    d.onclick = () => showQuote(i);
+    qDots.appendChild(d);
+  });
+}
+
+function showQuote(i) {
+  qText.classList.remove('visible');
+  qAuthor.classList.remove('visible');
+  setTimeout(() => {
+    qIdx = i;
+    qText.textContent = quotes[i].text;
+    qAuthor.textContent = quotes[i].author;
+    qText.classList.add('visible');
+    qAuthor.classList.add('visible');
+    document.querySelectorAll('.quote-dot').forEach((d, j) => d.classList.toggle('active', j === i));
+  }, 400);
+}
+
+buildDots();
+showQuote(0);
+setInterval(() => showQuote((qIdx + 1) % quotes.length), 5000);
+
+// ---- CONTACT FORM ----
+function submitForm() {
+  const name = document.getElementById('fname').value.trim();
+  const email = document.getElementById('femail').value.trim();
+  const msg = document.getElementById('fmessage').value.trim();
+  if (!name || !email || !msg) {
+    alert('الرجاء ملء جميع الحقول');
+    return;
+  }
+  document.getElementById('form-body').style.display = 'none';
+  document.getElementById('form-success').classList.add('show');
+}
+
+// ---- SMOOTH SCROLL FOR ANCHORS ----
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', e => {
+    const t = document.querySelector(a.getAttribute('href'));
+    if (t) { e.preventDefault(); t.scrollIntoView({ behavior: 'smooth' }); }
+  });
+});
+</script>
+</body>
+</html>
